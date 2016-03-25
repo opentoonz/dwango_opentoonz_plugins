@@ -1,14 +1,14 @@
 DWANGO OpenToonz Plugins
 =================
 
-`opentoonz_plugin_utility` を利用した Plugin のサンプルです。実行には `OpenCV` のランタイムが必要になります。
+[opentoonz_plugin_utility](https://github.com/opentoonz/opentoonz_plugin_utility) を利用し、Dwangoが開発した Plugin のサンプルです。実行には `OpenCV` のランタイムが必要になります。
 Windows 環境では、[Visual Studio 2013 の Visual C++ 再頒布可能パッケージ](https://www.microsoft.com/ja-jp/download/details.aspx?id=40784) も必要です。
 
 ## OpenCV3 のインストール
 
-### Mac
+### OSX
 
-Mac では下記コマンドでインストールできます。
+homebrew のインストールされている OSX では下記コマンドで OpenCV3 をインストールできます。
 
 ```
 brew install opencv3
