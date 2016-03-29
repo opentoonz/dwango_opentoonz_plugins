@@ -1,31 +1,6 @@
 サンプルプラグインマニュアル
 ===
 
-## 一覧
-
-| ファイル名 | プラグイン名 | 概要 |
-| --- | --- | --- |
-| `DWANGO_ComposeAdd.plugin` | `ComposeAdd` | 線形色空間で色を加算するエフェクトです。 |
-| `DWANGO_ComposeMul.plugin` | `ComposeMul` | 線形色空間で色を乗算するエフェクトです。 |
-| `DWANGO_ComposeOptical.plugin` | `ComposeOptical` | クベルカ光学理論に基づいて色を重ね合わせるエフェクトです。 |
-| `DWANGO_BlurChromaticAberration.plugin` | `BlurChromaticAberration` | RGB の各チャンネル毎に半径を設定できる円形ブラーです。 |
-| `DWANGO_BlurConvolution.plugin` | `BlurConvolution` | マスク画像によってボケ形状を指定できるブラーです。 |
-| `DWANGO_BlurMaskedC.plugin` | `BlurMaskedC` | マスク画像によって強度を調整できる円形ブラー (Circular Blur) です。 |
-| `DWANGO_BlurMaskedD.plugin` | `BlurMaskedD` | マスク画像によって強度を調整できる方向性ブラー (Directional Blur) です。 |
-| `DWANGO_BlurMaskedR.plugin` | `BlurMaskedR` | マスク画像によって強度を調整できる放射状ブラー (Radial Blur) です。 |
-| `DWANGO_BlurCurlNoise.plugin` | `BlurCurlNoise` | マスク入力を [curl-noise (PDF)](https://www.cs.ubc.ca/~rbridson/docs/bridson-siggraph2007-curlnoise.pdf) に変換して、入力画像に方向性ブラーをかけるエフェクトです。 |
-| `DWANGO_LightBloom.plugin` | `LightBloom` | エッジを保存したブラーにより、ブルームを生成するエフェクトです。 |
-| `DWANGO_LightGlare.plugin` | `LightGlare` | 放射状のブラーにより、グレアを生成するエフェクトです。 |
-| `DWANGO_LightIncident.plugin` | `LightIncident` | アナログチックな入射光を生成するエフェクトです。 |
-| `DWANGO_NoiseCoherent.plugin` | `NoiseCoherent` | `BlurCurlNoise`、`LightIncident`、および `WaveGlass` に入力するためのノイズを生成するエフェクトです。 |
-| `DWANGO_Drip.plugin` | `Drip` | 入力画像の閾値以上の画素だけ抽出するエフェクトです。 |
-| `DWANGO_Paraffin.plugin` | `Paraffin` | 画面上にパラフィンを配置するエフェクトです。 |
-| `DWANGO_PencilHatching.plugin` | `PencilHatching` | 鉛筆によるハッチング効果を再現するエフェクトです。 |
-| `DWANGO_WaveGlass.plugin` | `WaveGlass` | 波ガラスを再現するエフェクトです。 |
-| `DWANGO_Kaleidoscope.plugin` | `Kaleidoscope` | 万華鏡を再現するエフェクトです。 |
-| `DWANGO_Tiling.plugin` | `Tiling` | 入力画像を全画面にタイリングするエフェクトです。 |
-| `DWANGO_ImageQuilting.plugin` | `ImageQuilting` | 2 つの入力画像について、重なっている部分の最適な境界を計算して並べるエフェクトです。 |
-
 ## `ComposeAdd`
 
 線形色空間で色を加算するエフェクトです。
@@ -182,7 +157,7 @@ RGB の各チャンネル毎に半径を設定できる円形ブラーです。
 
 ## `BlurCurlNoise`
 
-マスク入力を [curl-noise (PDF)](https://www.cs.ubc.ca/~rbridson/docs/bridson-siggraph2007-curlnoise.pdf) に変換して、入力画像に方向性ブラーをかけるエフェクトです。
+マスク入力を [curl-noise (PDF)](https://www.cs.ubc.ca/~rbridson/docs/bridson-siggraph2007-curlnoise.pdf) に変換して、入力画像に LIC (line integral convolution) をかけるエフェクトです。
 
 ### 入力ポート
 
@@ -196,12 +171,9 @@ RGB の各チャンネル毎に半径を設定できる円形ブラーです。
 
 | パラメータ名 | デフォルト値 | 最小値 | 最大値 | 説明 |
 | --- | ---:| ---:| ---:| --- |
-| `gamma`    |   2.2 | 0.100 |    5 | ディスプレイのガンマ値 |
-| `exposure` |   1.0 | 0.125 |    8 | フィルムの露出量。入力画像の露出を 1 として換算します。値を大きくすると暗くなり、小さくすると明るくなります |
-| `gain`     |   2.0 | 0.100 |   10 | ブルームの明るさ |
-| `radius`   |   5.0 | 1.000 |   32 | ブラー半径 |
-| `level`    |   8.0 | 0.000 |   10 | ブラー範囲 |
-| `margin`   | 100.0 | 0.000 | 1024 | ブラーのマージン領域の大きさ |
+| `gain`        | 16.0 | 0.1 | 16.0 | ブラー強度 |
+| `attenuation` |  0.9 | 0.0 |  1.0 | LIC の減衰率 |
+| `debug`       |  0.0 | 0.0 |  1.0 | Noise の可視化 (デバッグ用) |
 
 ## `LightBloom`
 

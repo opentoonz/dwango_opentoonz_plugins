@@ -1,24 +1,25 @@
 DWANGO OpenToonz Plugins
 =================
 
-[opentoonz_plugin_utility](https://github.com/opentoonz/opentoonz_plugin_utility) を利用し、Dwangoが開発した Plugin のサンプルです。実行には `OpenCV` のランタイムが必要になります。
+[opentoonz_plugin_utility](https://github.com/opentoonz/opentoonz_plugin_utility) を利用し、DWANGO が開発したプラグインの実装サンプルです。実行には `OpenCV3` のランタイムが必要になります。
 Windows 環境では、[Visual Studio 2013 の Visual C++ 再頒布可能パッケージ](https://www.microsoft.com/ja-jp/download/details.aspx?id=40784) も必要です。
 
 ## ビルド済みプラグインの利用
 
-ここのプラグインを利用する最も簡単な方法は、同行しているビルド済みプラグインをそのまま利用することだと思います。
+プラグインを利用する最も簡単な方法は、ビルド済みプラグインをそのまま利用することです。
 
-`bin/{osx,win}/dwango_opentoonz_plugins.zip`がここで紹介しているプラグインをビルドしてzipに固めたものなので、これを展開して、中の.pluginファイルのうち利用したいものを `{Opentoonzのインストールされたディレクトリ}/plugins/` 以下にコピーしてください。OSXなら`/Applications/OpenToonz/OpenToonz_1.0_stuff/plugins/`、windowsなら`C:\OpenToonz 1.0 stuff\plugins\`であることが多いと思います。
+`bin/{osx,win}/dwango_opentoonz_plugins.zip` がここで紹介しているプラグインをビルドして zip に固めたものなので、これを展開して、中の `.plugin` ファイルのうち使用したいものを `{OpenToonz の Stuff フォルダ}/plugins/` 以下にコピーしてください。OSX なら `/Applications/OpenToonz/OpenToonz_1.0_stuff/plugins/`、Windows なら `C:\OpenToonz 1.0 stuff\plugins` がデフォルトのパスです。
 
-この後OpenToonzを再起動すればプラグインが追加されますが、OpenCV3を利用しているため、そちらの準備ができていないとプラグインが認識されません。Opencv3については、以下のインストール方法に従ってください。
+その後、OpenToonz を再起動すればプラグインが追加されますが、`OpenCV3` を利用しているため、そちらの準備ができていないと `OpenToonz` が起動されなくなります。`OpenCV3` については、以下のインストール方法に従ってください。
+
+個々のプラグインについては、[こちらのマニュアル](./doc/sample_plugins_manual.md) を参照してください。
+
 
 ## OpenCV3 のインストール
 
-ここで配布しているプラグインを利用するためには、OpenCV3がインストールされている必要があります。
-
 ### OSX
 
-homebrew のインストールされている OSX では下記コマンドで OpenCV3 をインストールできます。
+homebrew のインストールされている OSX では下記コマンドで `OpenCV3` をインストールできます。
 
 ```
 brew install opencv3
