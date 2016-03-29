@@ -12,7 +12,7 @@ Windows 環境では、[Visual Studio 2013 の Visual C++ 再頒布可能パッ�
 
 その後、OpenToonz を再起動すればプラグインが追加されますが、`OpenCV3` を利用しているため、そちらの準備ができていないと `OpenToonz` が起動されなくなります。`OpenCV3` については、以下のインストール方法に従ってください。
 
-個々のプラグインについては、[こちらのマニュアル](./doc/sample_plugins_manual.md) を参照してください。
+個々のプラグインについては、[こちらのマニュアル](./doc/sample_plugins_manual_jpn.md) を参照してください。
 
 
 ## OpenCV3 のインストール
