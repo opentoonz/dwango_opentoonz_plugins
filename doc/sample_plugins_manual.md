@@ -377,7 +377,7 @@ This effect applied LIC (line integral convolution) to an input image.
 
 | port name | |
 | --- | --- |
-| `Input` | 対象画像 |
+| `Input` | input image |
 
 ### parameters
 
