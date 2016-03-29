@@ -44,7 +44,7 @@ This effect composes colors based on the Kubelka-Munk equation.
 | param name | default value | min value | max value | |
 | --- | ---:| ---:| ---:| --- |
 | `gamma`    | 2.2 | 0.100 | 5.0 | display gamma |
-| `exposure` | 1.0 | 0.125 | 8.0 | exposure to calculate light power |
+| `exposure` | 1.0 | 0.125 | 8.0 | exposure for calculating light power |
 
 ## `BlurChromaticAberration`
 
@@ -61,7 +61,7 @@ This effect blurs an input image for each color channels.
 | param name | default value | min value | max value | |
 | --- | ---:| ---:| ---:| --- |
 | `gamma`    |   2.20 | 0.100 |    5.0 | display gamma |
-| `exposure` |   1.00 | 0.125 |    8.0 | exposure to calculate light power |
+| `exposure` |   1.00 | 0.125 |    8.0 | exposure for calculating light power |
 | `radius_r` |   0.01 | 1.000 |    1.0 | blur radius for red channel |
 | `radius_g` |   0.01 | 1.000 |    1.0 | blur radius for green channel |
 | `radius_b` |   0.01 | 1.000 |    1.0 | blur radius for blue channel |
@@ -190,7 +190,7 @@ This effect generates light bloom by edge preservation blur.
 | param name | default value | min value | max value | |
 | --- | ---:| ---:| ---:| --- |
 | `gamma`    |   2.2 | 0.100 |    5 | display gamma |
-| `exposure` |   1.0 | 0.125 |    8 | exposure to calculate light power |
+| `exposure` |   1.0 | 0.125 |    8 | exposure for calculating light power |
 | `gain`     |   2.0 | 0.100 |   10 | bloom intensity |
 | `radius`   |   5.0 | 1.000 |   32 | blur radius |
 | `level`    |   8.0 | 0.000 |   10 | blur level |
@@ -211,7 +211,7 @@ This effect generates light glare by discrete radial blur.
 | param name | default value | min value | max value | |
 | --- | ---:| ---:| ---:| --- |
 | `gamma`       |   2.2 | 0.100 |    5.000 | display gamma |
-| `exposure`    |   1.0 | 0.125 |    8.000 | exposure to calculate light power |
+| `exposure`    |   1.0 | 0.125 |    8.000 | exposure for calculating light power |
 | `gain`        |   2.0 | 0.100 |   10.000 | glare intensity |
 | `radius`      |   0.1 | 0.010 |    1.000 | glare radius |
 | `attenuation` |   0.9 | 0.001 |    0.999 | glare attenuation |
@@ -237,7 +237,7 @@ This effect generates analog incident lights.
 
 | param name | default value | min value | max value | |
 | --- | ---:| ---:| ---:| --- |
-| `time`       |  1.000 | 1 | 1500 | time of noise; a frame number is used as the time when `time` is `0` |
+| `time`       |  1.000 | 1 | 1500 | time parameter to determine internal state for calculating noise; a frame number is used as the time when `time` is `0` |
 | `time_limit` |  8.000 | 2 |  250 | loop point of the `time`. `time` is looped in `[1,time_limit]` |
 | `beta`       | 10.000 | 0 |   30 | time-dependent range of incident light direction |
 | `gamma`      |  0.001 | 0 |    1 | time-dependent sharpness of incident light direction |
@@ -320,7 +320,7 @@ This effect generates [Perlin Noise (PDF)](http://mrl.nyu.edu/~perlin/paper445.p
 
 | param name | default value | min value | max value | |
 | --- | ---:| ---:| ---:| --- |
-| `time`       | 1.00 | 1 | 1500 | time of noise; a frame number is used as the time when `time` is `0` |
+| `time`       | 1.00 | 1 | 1500 | time parameter to determine internal state for calculating noise; a frame number is used as the time when `time` is `0` |
 | `time_limit` | 8.00 | 2 |  250 | loop point of the `time`. `time` is looped in `[1,time_limit]` |
 | `alpha`      | 0.80 | 0 |    1 | smoothness of time coherence |
 | `gain`       | 1.00 | 0 |    1 | noise gain |
