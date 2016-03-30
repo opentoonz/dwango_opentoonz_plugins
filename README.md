@@ -7,7 +7,7 @@ They require OpenCV3 runtime. [Visual C++ Redistributable Packages for Visual St
 
 ## How to use prebuilt plugins
 
-[osx](https://github.com/opentoonz/dwango_opentoonz_plugins/releases/download/v1.0.0/dwango_opentoonz_plugins_osx.zip) and [win](https://github.com/opentoonz/dwango_opentoonz_plugins/releases/download/v1.0.0/dwango_opentoonz_plugins_win.zip) are zip archives which containes prebuilt plugins.
+[osx](https://github.com/opentoonz/dwango_opentoonz_plugins/releases/download/v1.0.0/dwango_opentoonz_plugins_osx.zip) and [win](https://github.com/opentoonz/dwango_opentoonz_plugins/releases/download/v1.0.0/dwango_opentoonz_plugins_win.zip) are zip archives which contain prebuilt plugins.
 You can install them with following steps:
 
 0. Copy `.plugin` files, which you want, to `${path-to-opentoonz-stuff}/plugins/`.
