@@ -1,4 +1,4 @@
-DWANGO OpenToonz Plugins
+DWANGO OpenToonz Plugins ([English](./README.md))
 =================
 
 [opentoonz_plugin_utility](https://github.com/opentoonz/opentoonz_plugin_utility) を利用し、DWANGO が開発したプラグインの実装サンプルです。実行には `OpenCV3` のランタイムが必要になります。

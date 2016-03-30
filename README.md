@@ -1,4 +1,4 @@
-DWANGO OpenToonz Plugins
+DWANGO OpenToonz Plugins ([日本語](./README_ja.md))
 =================
 
 This repository contains example plugins for developers.
