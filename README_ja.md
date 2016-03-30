@@ -8,7 +8,7 @@ Windows 環境では、[Visual Studio 2013 の Visual C++ 再頒布可能パッ�
 
 プラグインを利用する最も簡単な方法は、ビルド済みプラグインをそのまま利用することです。
 
-`bin/{osx,win}/dwango_opentoonz_plugins.zip` がここで紹介しているプラグインをビルドして zip に固めたものなので、これを展開して、中の `.plugin` ファイルのうち使用したいものを `{OpenToonz の Stuff フォルダ}/plugins/` 以下にコピーしてください。OSX なら `/Applications/OpenToonz/OpenToonz_1.0_stuff/plugins/`、Windows なら `C:\OpenToonz 1.0 stuff\plugins` がデフォルトのパスです。
+これら ([osx](https://github.com/opentoonz/dwango_opentoonz_plugins/releases/download/v1.0.0/dwango_opentoonz_plugins_osx.zip), [win](https://github.com/opentoonz/dwango_opentoonz_plugins/releases/download/v1.0.0/dwango_opentoonz_plugins_win.zip)) がここで紹介しているプラグインをビルドして zip に固めたものなので、これを展開して、中の `.plugin` ファイルのうち使用したいものを `{OpenToonz の Stuff フォルダ}/plugins/` 以下にコピーしてください。OSX なら `/Applications/OpenToonz/OpenToonz_1.0_stuff/plugins/`、Windows なら `C:\OpenToonz 1.0 stuff\plugins` がデフォルトのパスです。
 
 その後、OpenToonz を再起動すればプラグインが追加されますが、`OpenCV3` を利用しているため、そちらの準備ができていないと `OpenToonz` が起動されなくなります。`OpenCV3` については、以下のインストール方法に従ってください。
 
