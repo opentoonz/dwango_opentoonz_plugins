@@ -19,7 +19,7 @@ if(WIN32)
 endif(WIN32)
 
 if(APPLE)
-    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++14 -stdlib=libc++")
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -stdlib=libc++")
     set(PLUGIN_UTILITY_LIB "${CMAKE_CURRENT_SOURCE_DIR}/opentoonz_plugin_utility/lib/${CMAKE_CFG_INTDIR}/libopentoonz_plugin_utility.a")
 endif(APPLE)
 
@@ -27,7 +27,7 @@ find_package(OpenCV REQUIRED)
 set(LIBS ${OpenCV_LIBS} ${PLUGIN_UTILITY_LIB})
 
 include_directories(opentoonz_plugin_utility/include
-                    opentoonz_plugin_utility/opentoonz_plugin_headers
+                    opentoonz_plugin_utility/plugin_sdk/core
                     "${OpenCV_INCLUDE_DIRS}")
 link_directories("${OpenCV_LIBS}")
 
