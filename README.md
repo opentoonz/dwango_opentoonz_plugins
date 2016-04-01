@@ -13,7 +13,7 @@ You can install them with following steps:
 0. Copy `.plugin` files, which you want, to `${path-to-opentoonz-stuff}/plugins/`.
   - `${path-to-opentoonz-stuff}` is `/Applications/OpenToonz/OpenToonz_1.0_stuff/plugins/` (OSX) or `C:\OpenToonz 1.0 stuff\plugins` (Windows) by default.
 0. Install `OpenCV3`.
-0. Restert OpenToonz.
+0. Restart OpenToonz.
 
 Plugin manual is [here](./doc/sample_plugins_manual.md).
 
