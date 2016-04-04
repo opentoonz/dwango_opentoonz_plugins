@@ -23,6 +23,11 @@ if(APPLE)
     set(PLUGIN_UTILITY_LIB "${CMAKE_CURRENT_SOURCE_DIR}/opentoonz_plugin_utility/lib/${CMAKE_CFG_INTDIR}/libopentoonz_plugin_utility.a")
 endif(APPLE)
 
+if(UNIX AND NOT APPLE)
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
+    set(PLUGIN_UTILITY_LIB "${CMAKE_CURRENT_SOURCE_DIR}/opentoonz_plugin_utility/lib/${CMAKE_CFG_INTDIR}/libopentoonz_plugin_utility.a")
+endif(UNIX AND NOT APPLE)
+
 find_package(OpenCV REQUIRED)
 set(LIBS ${OpenCV_LIBS} ${PLUGIN_UTILITY_LIB})
 
