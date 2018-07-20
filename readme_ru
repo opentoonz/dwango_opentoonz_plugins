@@ -1,5 +1,5 @@
 DWANGO OpenToonz плагины ([日本語](./README_ja.md))
-=================
+===================================================
 
 Этот репозиторий содержит пример плагинов для разработчиков.
 Эти плагины зависят от [opentoonz_plugin_utility](https://github.com/opentoonz/opentoonz_plugin_utility).
