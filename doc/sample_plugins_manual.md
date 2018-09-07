@@ -1,9 +1,9 @@
-Sample Plugins Manual
+Руководство по примерам плагинов
 ===
 
 ## `ComposeAdd`
 
-This effect adds colors in linear color space.
+Этот эффект добавляет цвета в линейное цветовое пространство.
 
 ### input ports
 
@@ -17,7 +17,7 @@ None
 
 ## `ComposeMul`
 
-This effect multiplies colors in linear color space.
+Этот эффект умножает цвета в линейном цветовом пространстве.
 
 ### input ports
 
@@ -31,7 +31,7 @@ None
 
 ## `ComposeOptical`
 
-This effect composes colors based on the Kubelka-Munk equation.
+Этот эффект составляет цвета, основанные на уравнении Кубельки-Мунка.
 
 ### input ports
 
@@ -44,11 +44,11 @@ This effect composes colors based on the Kubelka-Munk equation.
 | param name | default value | min value | max value | |
 | --- | ---:| ---:| ---:| --- |
 | `gamma`    | 2.2 | 0.100 | 5.0 | display gamma |
-| `exposure` | 1.0 | 0.125 | 8.0 | exposure for calculating light power |
+| `exposure` | 1.0 | 0.125 | 8.0 | экспозиция для расчета мощности света |
 
 ## `BlurChromaticAberration`
 
-This effect blurs an input image for each color channels.
+Этот эффект размывает входное изображение для каждого цветового канала.
 
 ### input ports
 
